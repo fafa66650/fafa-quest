@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070b12">
+  <meta name="color-scheme" content="dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; font-src 'self' data:; media-src 'self'; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="FAFA QUEST">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="FAFA QUEST — escape games immersifs numériques et hybrides, solo ou équipe, sur téléphone, tablette, ordinateur et TV.">
+  <title>FAFA QUEST — Escape & Immersion</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/icon-192.png">
+  <link rel="apple-touch-icon" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./styles.css?v=0.8.2">
+</head>
+<body>
+  <div id="app"><main class="shell"><section class="card"><strong>Chargement de FAFA QUEST…</strong></section></main></div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript>FAFA QUEST nécessite JavaScript pour lancer les jeux.</noscript>
+  <script src="./js/boot.js" defer></script>
+  <script type="module" src="./js/app.js?v=0.8.2"></script>
+</body>
+</html>
