@@ -1,5 +1,0 @@
-function b64urlEncode(obj){const s=JSON.stringify(obj),bytes=new TextEncoder().encode(s);let bin='';bytes.forEach(b=>bin+=String.fromCharCode(b));return btoa(bin).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'')}
-function b64urlDecode(s){s=s.replace(/-/g,'+').replace(/_/g,'/');while(s.length%4)s+='=';const bin=atob(s),bytes=Uint8Array.from(bin,c=>c.charCodeAt(0));return JSON.parse(new TextDecoder().decode(bytes))}
-export function makeTeamPayload(session,team){return {v:1,title:session.title,scenarioId:session.scenarioId,difficulty:session.difficulty,durationMin:session.durationMin,team:{name:team.name,code:team.code,members:team.members,roles:team.roles,teamKey:team.teamKey,startWorldIndex:team.startWorldIndex}}}
-export function makeTeamLink(session,team){const u=new URL(location.href);u.hash='';u.search='';u.searchParams.set('team',b64urlEncode(makeTeamPayload(session,team)));return u.toString()}
-export function parseTeamPayload(raw){try{const p=b64urlDecode(raw);if(p?.v!==1||!p.scenarioId||!p.team)return null;return p}catch{return null}}
