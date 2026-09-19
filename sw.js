@@ -1,5 +1,5 @@
-const CACHE='fafa-quest-v0.5.0';
-const ASSETS=['./','./index.html','./styles.css','./manifest.webmanifest','./js/app.js','./js/data.js','./js/engine.js','./js/session.js','./js/storage.js','./js/ui.js','./js/accessibility.js','./js/host-auth.js','./js/share.js','./assets/icon-192.png','./assets/icon-512.png'];
+const CACHE='fafa-quest-v0.6.0';
+const ASSETS=['./','./index.html','./styles.css','./manifest.webmanifest','./js/app.js','./js/data.js','./js/engine.js','./js/session.js','./js/storage.js','./js/ui.js','./js/accessibility.js','./js/host-auth.js','./js/share.js','./js/qrcode.js','./assets/icon-192.png','./assets/icon-512.png'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith('fafa-quest-')&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener('message',e=>{if(e.data?.type==='SKIP_WAITING')self.skipWaiting()});
