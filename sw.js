@@ -1,4 +1,4 @@
-const CACHE='fafa-quest-v1.0.0';
+const CACHE='fafa-quest-v1.0.1';
 const ASSETS=[
   './index.html','./assets/app.css','./app.webmanifest',
   './runtime/boot.js','./runtime/app.js','./runtime/data.js','./runtime/engine.js','./runtime/session.js','./runtime/storage.js','./runtime/ui.js','./runtime/accessibility.js','./runtime/host-auth.js','./runtime/share.js','./runtime/qrcode.js',
